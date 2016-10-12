@@ -1,4 +1,4 @@
-var randomWord = require('random-word-by-length');
+var randomWord = require('random-word-fa');
 
 export default function GameEngine (type) {
     function UpdateScore(state){
