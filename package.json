@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
+    "persian-text": "^0.2.2",
     "random-word-fa": "^0.2.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

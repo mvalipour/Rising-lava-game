@@ -1,4 +1,5 @@
 var classNames = require('classnames');
+var textUtils = require('persian-text');
 
 import React, { Component } from 'react';
 
@@ -17,7 +18,7 @@ class Word extends Component {
       ]);
         return (
             <div className={className}>
-                {this.props.word.split('').map((char, index) => {
+                {textUtils.denormalize(this.props.word).split('').map((char, index) => {
                     var classes = [];
                     if(index < this.props.matchedLetters) {
                         classes.push("correct");
@@ -26,7 +27,7 @@ class Word extends Component {
 
                     return (
                         <span className={classes}>{char}</span>
-                    )   
+                    )
                 })}
             </div>
         );
