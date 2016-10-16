@@ -22,7 +22,7 @@ class GameBoard extends Component {
         const effectiveLavaHeight = Math.max(this.props.lavaHeight - (this.props.gridSegmentHeight * this.props.hiddenPlatforms), 0);
 
         const classes = classNames(["game-board", this.props.gameState]);
-        const boardStyle = { backgroundPositionY: (this.props.actorPosition * 10) + "px" };
+        const boardStyle = { backgroundPositionY: (this.props.hiddenPlatforms * 10) + "px" };
 
         return (
             <div className="game-board-wrapper">
