@@ -58,6 +58,11 @@ class App extends Component {
   }
 
   checkWord(event){
+    // ignore shift keys
+    if(["Shift"].indexOf(event.key) >= 0) {
+      return;
+    }
+
     if ((this.state.gameState === 'in-progress' || this.state.gameState === 'paused' ) && event.key === "Escape"){
       let nextState = this.gameEngine.togglePause(this.state);
       this.setState(nextState);
